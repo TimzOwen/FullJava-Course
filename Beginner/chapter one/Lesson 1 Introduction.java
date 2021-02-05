@@ -64,7 +64,35 @@ public class fullJavaCourse{
         Date todaysDate = new Date();
         System.out.println(todaysDate); //returns current date and time
 
-        //REFERENCE 
+        
+    //REFERENCE and PRIMITIVE TYPES:
+    // memory management
+    byte x = 3;
+    byte y = x;
+    x = 10;
+    System.out.println(y); // y remains same irespective of the update because
+    they are independable
+    System.out.println(x);
+
+    //refence variable alone:
+    //changes both values
+    Point point1 = new Point(x=2, y=6);
+    Point point2 = point1;
+    System.out.println(point2);
+
+    Point point1 = new Point(2,6);
+    Point point2 = point1;
+    System.out.println(point2);
+    System.out.println(point1);
+    // now change the values and observe the change pointing variable
+    point1.y = 10;
+    point2.x = 20;
+    System.out.println(point1); // all the values change because they point to
+    the same memory
+
+    // N/B: Reference type are copied by their reference
+    // Primitive types are copied by their values BUT completly defferent from
+    // each other
 
     }
 }
