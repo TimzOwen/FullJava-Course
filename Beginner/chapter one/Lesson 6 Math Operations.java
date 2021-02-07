@@ -70,3 +70,49 @@
     System.out.println("Enter your favorite food: ");
     String favFood =scanner2.nextLine().trim();   // removes white spaces in your code:
     System.out.println("You love eating; " + favFood);
+
+    
+    //challenge:
+    // simple intrest calculator
+
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter principal amount: ");
+    double principalAmount = scanner.nextDouble();
+
+    System.out.println("Enter years: ");
+    double years = scanner.nextDouble();
+
+    System.out.println("Enter Rate: ");
+    double rate = scanner.nextDouble();
+
+    double totalAmount = principalAmount * (rate/100) * years;
+
+    System.out.println("Your loan matured to: ksh: " + (totalAmount + principalAmount));
+
+
+    // Challenge 2:
+    // currency intrest calculator:
+
+    final byte MONTHS_IN_YEARS = 12;
+    final byte PERCENT = 100;
+
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.print("Enter principal Amount; ");
+    int principal = scanner.nextInt();
+
+    System.out.print("Annual Intrest Rate: ");
+    float annualIntrestRate =  scanner.nextFloat();
+    float monthlyIntrestRate = annualIntrestRate/PERCENT/MONTHS_IN_YEARS;
+
+    System.out.print("Enter Number of years: ");
+    byte years = scanner.nextByte();
+    int numberOfPayments = years * MONTHS_IN_YEARS;
+
+    double mortgage = principal 
+                      * (monthlyIntrestRate * Math.pow(1 + monthlyIntrestRate, numberOfPayments))
+                      / (Math.pow(1 + monthlyIntrestRate, numberOfPayments) -1);
+    String mortgageFormated = NumberFormat.getCurrencyInstance().format(mortgage);
+    System.out.println("Accumulated mortgage: " + mortgageFormated);
+
