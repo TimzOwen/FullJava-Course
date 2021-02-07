@@ -26,3 +26,19 @@
     double randomZero2Ten = Math.random() * 10; // random between 0 and 10
     int randomInt = (int)Math.round(Math.random() * 100); // roudn into integers
     int randomNoRound = (int) (Math.random() * 100);
+
+    
+    
+    // Working with Numbers
+    // Formating the Numbers
+
+    // working with Currency convertions:
+    NumberFormat localCurrency =  NumberFormat.getCurrencyInstance();
+    String marketCurrency = localCurrency.format(98756437.50); 
+
+    // Percentage instance convertions:
+    NumberFormat currentRate = NumberFormat.getPercentInstance();
+    String converted = currentRate.format(0.5);
+
+    // Method chaining for Repeated Methods
+    String currencyUpdate = NumberFormat.getPercentInstance().format(0.79);  
