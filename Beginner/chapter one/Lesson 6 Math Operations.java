@@ -42,3 +42,31 @@
 
     // Method chaining for Repeated Methods
     String currencyUpdate = NumberFormat.getPercentInstance().format(0.79);  
+
+
+
+    
+    
+    //READING USER INPUTS:
+    // uses Scanner object to allow user input
+    // system.out -> writes out to the screen/file
+    // system.in --> writes in from the terminal or file
+
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter your age: ");
+    int age = scanner.nextInt();
+    System.out.println("You are " + age + " years");
+
+    // input Strings:
+    Scanner scanner2 = new Scanner(System.in);
+    System.out.println("Enter your Name: ");
+    String name = scanner2.next();    // only takes in one string character 
+    System.out.println(" You are " + name);
+
+    System.out.print("Enter your School: ");
+    String school = scanner2.nextLine();      // does not eliminatge white spaces
+    System.out.println("You study at " + school );
+
+    System.out.println("Enter your favorite food: ");
+    String favFood =scanner2.nextLine().trim();   // removes white spaces in your code:
+    System.out.println("You love eating; " + favFood);
