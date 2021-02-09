@@ -35,3 +35,58 @@
     System.out.println((hasExperience || hasGraduated) && !hasIncompleteUnits); // ! reverses the statement
 
 
+    
+    // IF STATEMENTS
+    // Used for making decisions based on certain conditions
+    int score = 40;
+
+    if (score < 20){
+      System.out.println("Easy game !! ");
+      System.out.println(" Simplify Training ");
+    }
+    else if (score > 20){
+      System.out.println(" Tough game ");
+      System.out.println(" Do more training ");
+    }
+    else if (score == 20){
+      System.out.println(" Draw game .");
+      System.out.println("Score shared");
+    }
+    else{
+      System.out.println("Check score board ");
+    }
+
+
+    
+    // Reduce complexity in control staements
+    int startingSalary = 800_000;
+    boolean hasGoodSalary;
+    if (startingSalary > 100_000){
+      hasGoodSalary = true;
+      System.out.println(hasGoodSalary);
+    }
+    else
+    {
+      hasGoodSalary = false;
+      System.out.println(hasGoodSalary);
+    }
+
+
+   
+    // more simplification:
+
+    int startingSalary = 80_000;
+    boolean hasGoodSalary = false;
+    if (startingSalary > 100_000){
+      hasGoodSalary = true;
+    }
+    System.out.println(hasGoodSalary);
+
+
+    // simplify it more:
+
+    int startingSalary = 500_000;
+    boolean hasGoodSalary = (startingSalary>100_000);
+    System.out.println(hasGoodSalary);
+
+    
