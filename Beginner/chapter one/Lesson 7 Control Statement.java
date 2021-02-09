@@ -105,4 +105,72 @@
       int carPrice = 5_200_000;
       String driverClass = (carPrice > 2_500_000) ? "The Owners": "The passanger class";
       System.out.println(driverClass);
+
+     
+    // SWITCH STATEMENTS IN JAVA:
+    // used to execute different type of code depending on expresion's value:
+    // break is always used to exit the block's execution 
+    // if statements can perform the same tasks but not recommended:
+    int daysOfWeek = 7;
+    switch(daysOfWeek){
+      case 1:
+        System.out.println("Monday");
+        break;
+      case 2:
+        System.out.println("Tuesday");
+        break;
+      case 3:
+        System.out.println("Wednesday");
+        break;
+      case 6: 
+        System.out.println("Sartuday");
+      default:
+        System.out.println("Sunday");
+    }
+
+
+    FizzBuzz Game Challenge:
+
+    // soln 1
+    System.out.println("Number: ");
+    Scanner scanner = new Scanner(System.in);
+    int number = scanner.nextInt();
+    
+    if ((number % 5 == 0) && (number % 3 == 0)){
+      System.out.println("FizzBuzz");
+    }
+    else if (number % 3 == 0){
+      System.out.println("Buzz");
+    }
+    else if (number % 5 == 0){
+      System.out.println("Fizz");
+    }
+    else{
+      System.out.println(number);
+    }
+
+
+    
+    // soln 2:
+    // nesting loops
+
+    System.out.println("Number: ");
+    Scanner scanner = new Scanner(System.in);
+    int number = scanner.nextInt();
+
+    if (number % 5 == 0){
+      if (number % 3 == 0){
+        System.out.println("FizzBuzz");
+      }
+      else{
+        System.out.println("Fizz");
+      }
+      }
+    else if (number % 3 == 0){
+      System.out.println("Buzz");
+    }
+    else{
+      System.out.println(number);
+    }
+
     
