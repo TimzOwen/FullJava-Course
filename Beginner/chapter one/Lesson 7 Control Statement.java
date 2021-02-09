@@ -90,3 +90,19 @@
     System.out.println(hasGoodSalary);
 
     
+    // Terrnary and If combination:
+    ?: --> tenary operator
+      int carPrice = 1_200_000;
+      String driverClass = "Passanger class";
+      if (carPrice > 2_500_000){
+        driverClass = "The Owners class";
+      }
+      System.out.println(driverClass);
+
+
+    // reduce complexity
+
+      int carPrice = 5_200_000;
+      String driverClass = (carPrice > 2_500_000) ? "The Owners": "The passanger class";
+      System.out.println(driverClass);
+    
