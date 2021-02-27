@@ -108,3 +108,48 @@
       System.out.println(laptop);
     }
 
+
+    
+    
+    // FINAL PROJECT:
+    // mortage calculator:
+
+    final byte MONTHS_IN_YEARS = 12;
+    final byte PERCENT = 100;
+    
+    int principal = 0;
+    float monthlyIntrest = 0;
+    int numberOfPayments = 0;
+
+    Scanner scanner = new Scanner(System.in);
+    
+    while(true){
+      System.out.println("Principal amount");
+      principal = scanner.nextInt();
+      if(principal>= 1_000 && principal <= 1_000_000)
+        break;
+      System.out.println("Enter number between $1 and $1000");
+    }
+    while(true){
+    System.out.println("Annual Intrest Rate: ");
+    float annualIntrest = scanner.nextFloat();
+    if (annualIntrest >=1 && annualIntrest<=30){
+      monthlyIntrest = annualIntrest/PERCENT/MONTHS_IN_YEARS;
+      break;
+      }
+    }
+    while(true){
+      System.out.println("Period in years: ");
+      byte years = scanner.nextByte();
+      if(years >= 1 && years <= 30){
+        numberOfPayments = years * MONTHS_IN_YEARS;
+        break;
+      }
+      System.out.println("Enter value between 1 and 30: ");
+      
+      double mortage = principal
+                      * (monthlyIntrest * Math.pow(1 + monthlyIntrest, numberOfPayments))
+                      /(Math.pow(1 + monthlyIntrest, numberOfPayments));
+      String mortageFormated = NumberFormat.getCurrencyInstance(mortage);
+      System.out.println("Mortage: " + mortageFormated);
+
