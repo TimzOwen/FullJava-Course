@@ -263,3 +263,52 @@ public class FullCourseJava {
 
     }
 }
+
+
+
+// METHODS AND CONSTRUCTOR OVERLOADING
+import java.awt.*;
+import java.util.Scanner;
+
+// Constructor overloading
+
+class Calculator {
+    // instance variables
+    int num1, num2;
+
+    // public function to make it accessible
+    public Calculator(int num1, int num2) {
+        // default constructor which gets called when object has been created
+        // use 'this' keyword to specify that its instance and not local variable you
+        // are using
+        this.num1 = num1;
+        this.num2 = num2;
+    }
+
+    // constructor overloading allows you to use same function name with different
+    // parameter
+
+    public void calculateSum(int a, int b) {
+        System.out.println(a + b);
+    }
+
+    public void calculateSum(int a, int b, int c) {
+        System.out.println(a + b + c);
+    }
+
+    public void calculateSum(double a, int b, int c) {
+        System.out.println(a + b + c);
+    }
+}
+
+public class FullCourseJava {
+    public static void main(String[] args) {
+        Calculator calculate = new Calculator(4, 10);
+        System.out.println(calculate.num1); // returns 0 because both are taking local instance
+        calculate.calculateSum(4, 5);
+        calculate.calculateSum(5.5, 2, 2);
+        calculate.calculateSum(4, 4, 4);
+
+    }
+}
+
