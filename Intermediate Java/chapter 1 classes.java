@@ -357,3 +357,42 @@ public class FullCourseJava {
     }
 }
 
+
+
+
+
+// JAVA STATIC KEY WORDS
+
+class Lec{
+    int id;
+    double salary;
+    String hod;
+
+    //create a function to show the data
+    public void showData(){
+        System.out.println(hod + " id number: " + id + " Salary: " + salary);
+    }
+}
+
+public class Students {
+    public static void main(String[] args){
+
+        Lec lecEducation = new Lec();
+        lecEducation.salary = 5000.50;
+        lecEducation.hod = "prof Ngala";
+        lecEducation.id = 35419092;
+
+        Lec lecEngineering = new Lec();
+        lecEngineering.salary = 6000.50;
+        lecEngineering.hod = "prof Ragama";
+        lecEngineering.id = 354767594;
+
+        lecEducation.showData();
+        lecEngineering.showData();
+       
+    }
+}
+
+
+
+
