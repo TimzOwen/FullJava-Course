@@ -25,3 +25,37 @@ public class Calculator {
         // calc.attribute/value
     }
 }
+
+
+
+// return values from a function
+import java.awt.*;
+import java.util.Scanner;
+
+class Calculator{
+    // attributes
+    int a;
+    int b;
+    int results;
+
+    //public function to make it accessible
+    public void calculate(){
+        results = a + b;
+    }
+    
+}
+
+public class FullCourseJava {
+
+    public static void main(String[] args) {
+
+        Calculator calculate = new Calculator();
+        calculate.a = 5;
+        calculate.b = 5;
+
+        calculate.calculate();
+
+        System.out.println(calculate.results); // returns 10
+
+    }
+}
