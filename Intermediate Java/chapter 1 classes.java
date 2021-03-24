@@ -394,5 +394,43 @@ public class Students {
 }
 
 
+// static implementation
+
+// understanding static in Classes:
+// static makes sure one value is set to all classes and one change changes all the other
+// makes sure its not object specific
+
+class Lec{
+    int id;
+    double salary;
+    static String hod;
+
+    //create a function to show the data
+    public void showData(){
+        System.out.println(hod + " id number: " + id + " Salary: " + salary);
+    }
+}
+
+public class Students {
+    public static void main(String[] args){  // method is static because we dont need an object to run it
+
+        Lec lecEducation = new Lec();
+        lecEducation.salary = 5000.50;
+        // use the class reference since its static and no need of object
+        Lec.hod = "prof Ngala";
+        lecEducation.id = 35419092;
+
+        Lec lecEngineering = new Lec();
+        lecEngineering.salary = 6000.50;
+        Lec.hod = "prof wanyama";           // overides both values to professor Wanyama
+        lecEngineering.id = 354767594;
+
+        lecEducation.showData();
+        lecEngineering.showData();
+
+    }
+}
+
+
 
 
