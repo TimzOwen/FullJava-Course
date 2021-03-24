@@ -230,3 +230,36 @@ public class FullCourseJava {
 
     }
 }
+
+
+// Solution
+import java.awt.*;
+import java.util.Scanner;
+
+class Calculator {
+    // instance variables
+    int num1, num2;
+
+    // public function to make it accessible
+    public Calculator(int num1, int num2) {
+        // default constructor which gets called when object has been created
+
+        // use 'this' keyword to specify that its instance and not local variable you
+        // are using
+
+        this.num1 = num1;
+        this.num2 = num2;
+    }
+}
+
+public class FullCourseJava {
+
+    public static void main(String[] args) {
+
+        Calculator calculate = new Calculator(4, 10);
+
+        System.out.println(calculate.num1); // returns 0 becuse both are takng local instance
+        System.out.println(calculate.num2); // reuturns 0
+
+    }
+}
