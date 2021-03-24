@@ -168,3 +168,65 @@ public class FullCourseJava {
 
     }
 }
+
+
+
+// This Key word in JAVA
+
+//
+import java.awt.*;
+import java.util.Scanner;
+
+class Calculator{
+    // instance variables
+    int num1, num2;
+
+    //public function to make it accessible
+    public Calculator(int number1, int number2){
+      //default constructor which gets called when object has been created
+        num1 = number1;
+        num2 = number2;
+    }
+}
+
+public class FullCourseJava {
+
+    public static void main(String[] args) {
+
+        Calculator calculate = new Calculator(4, 10);
+
+        System.out.println(calculate.num1);
+        System.out.println(calculate.num2);
+
+    }
+}
+
+// instance variable and local varibale scope
+import java.awt.*;
+import java.util.Scanner;
+
+class Calculator{
+    // instance variables
+    int num1, num2;
+
+    //public function to make it accessible
+    public Calculator(int num1, int num2){
+      //default constructor which gets called when object has been created
+
+        //instance variable     Local varibale
+        num1        =           num1;
+        num2        =           num2;
+    }
+}
+
+public class FullCourseJava {
+
+    public static void main(String[] args) {
+
+        Calculator calculate = new Calculator(4, 10);
+
+        System.out.println(calculate.num1); // returns 0
+        System.out.println(calculate.num2); // reuturns 0
+
+    }
+}
