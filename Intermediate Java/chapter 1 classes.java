@@ -312,3 +312,48 @@ public class FullCourseJava {
     }
 }
 
+
+
+// CONSTRUCTORS OVERLOADING
+
+// Constructor overloading
+
+class Calculator {
+    // instance variables
+    int num1, num2;
+    String userName;
+
+    public Calculator() { // constructor 1
+        num1 = 0;
+        num2 = 1;
+        userName = "no name";
+    }
+
+    public Calculator(int i) { // constructor 2
+        num1 = i;
+        num2 = 0;
+        userName = "no name";
+    }
+
+    public Calculator(int i, int j) { // constructor number 3
+        num1 = i;
+        num2 = j;
+        userName = "No name";
+    }
+
+    public Calculator(int i, int j, String name) { // constructor number 4
+        num1 = i;
+        num2 = j;
+        userName = name;
+    }
+}
+
+public class FullCourseJava {
+    public static void main(String[] args) {
+        Calculator calculate = new Calculator(); // calls cons 1
+        Calculator cal2 = new Calculator(4); // calls cons 2
+        Calculator cal3 = new Calculator(4, 5); // calls cons 3
+        Calculator cal4 = new Calculator(3, 5, "owen"); // calls cons number 4
+    }
+}
+
