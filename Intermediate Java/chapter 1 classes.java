@@ -474,3 +474,46 @@ public class Students {
 }
 
 
+
+
+// Number of times a static is called
+
+// static declaration:
+
+
+class Lec{
+    int id;
+    double salary;
+    static String hod;
+
+    static {   // called only once when you laod a class
+        hod = "Prof Mutinda";
+        System.out.println("I am just called once");
+    }
+
+    // default constructor
+
+    public Lec(){     // called when you create an object. that's why its printed twice
+        id = 1;
+        salary = 10000;
+        System.out.println("I have been called twice");
+    }
+
+    //create a function to show the data
+    public void showData(){
+        System.out.println(hod + " id number: " + id + " Salary: " + salary);
+    }
+}
+
+public class Students {
+    public static void main(String[] args){  // method is static because we dont need an object to run it
+
+        Lec lecEducation = new Lec();
+
+        Lec lecEngineering = new Lec();
+
+        lecEducation.showData();
+        lecEngineering.showData();
+
+    }
+}
