@@ -708,3 +708,25 @@ public class Students {
 
     }
 }
+
+// Create a class that takes in a number of the parameter and performs multiplication or additions without 
+// declaring its valeus each time
+// VARARGS in java programming and Classes
+// Variable Length Argument
+
+class Calc{
+    public int add(int...s){   // Variable Length arguments.
+        int sum = 0;
+        for (int i : s){
+            sum += i;
+        }
+        return sum;
+    }
+}
+public class Students {
+    public static void main(String[] args){
+
+        Calc calc = new Calc();
+        System.out.println(calc.add(4,3,4,5));
+    }
+}
