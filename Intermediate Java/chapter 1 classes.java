@@ -433,4 +433,44 @@ public class Students {
 
 
 
+// static declaration
+
+// static declaration:
+
+
+class Lec{
+    int id;
+    double salary;
+    static String hod;
+
+    static {
+        hod = "Prof Mutinda";
+    }
+
+    // default constructor
+
+    public Lec(){
+        id = 1;
+        salary = 10000;
+    }
+
+    //create a function to show the data
+    public void showData(){
+        System.out.println(hod + " id number: " + id + " Salary: " + salary);
+    }
+}
+
+public class Students {
+    public static void main(String[] args){  // method is static because we dont need an object to run it
+
+        Lec lecEducation = new Lec();
+
+        Lec lecEngineering = new Lec();
+
+        lecEducation.showData();
+        lecEngineering.showData();
+
+    }
+}
+
 
