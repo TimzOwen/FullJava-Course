@@ -602,3 +602,109 @@ public class Students {
     }
 }
 
+
+
+// INNER CLASSES
+
+// Outer and Inner classes declaration
+class OutterCLass{      //saved as outterCLass.class
+    int total_cost;
+    String employees;
+
+    public void checkClass(){
+        System.out.println("This is a function of the outer class");
+    }
+
+    //create another class
+    class InnerClass{   // will bes saved in a file as Outer$Inner.class
+        int total_cost;
+        String employees;
+
+        public void displaySomething(){
+            System.out.println("I am inner class in outer class");
+        }
+    }
+}
+
+//another class:
+class ClassTwo{     // Saved in a file as ClassTwo.java
+    int employees;
+    String users;
+
+    public void total_users(){
+        System.out.println("We have many user in the server");
+    }
+}
+
+public class Students {
+    public static void main(String[] args){
+
+        // instantiate the out class by calling its object
+        OutterCLass outterCLass = new OutterCLass();
+        outterCLass.checkClass();
+
+        // to instantiate and use methods of inner class, use the dot. with inner class
+        OutterCLass.InnerClass innerClass = outterCLass.new InnerClass();
+
+        // now start performing other operations on the class
+        innerClass.displaySomething();
+
+        // the second class
+        ClassTwo classTwo = new ClassTwo();
+         classTwo.total_users();
+
+    }
+}
+
+
+// static classes and how to access its members and variable from the main function in the class
+
+// Outer and Inner classes declaration
+class OutterCLass{
+    static int total_cost;
+    static String employees;
+
+    public static void checkClass(){
+        System.out.println("This is a function of the outer class");
+    }
+
+    //create another class
+    static class InnerClass{
+        int total_cost;
+        String employees;
+
+        public static void displaySomething(){
+            System.out.println("I am inner class in outer class");
+        }
+    }
+}
+
+//another static classes and Functions
+
+class ClassTwo{
+    static int employees;
+    String users;
+
+    public static void total_users(){
+        System.out.println("We have many user in the server");
+    }
+}
+
+public class Students {
+    public static void main(String[] args){
+
+        // instantiate the out class by calling its object
+        OutterCLass outterCLass = new OutterCLass();
+        outterCLass.checkClass();
+
+        // to instantiate and use methods of inner class, use the dot. with inner class
+        OutterCLass.InnerClass innerClass = new OutterCLass.InnerClass();
+
+        // now start performing other operations on the class
+        innerClass.displaySomething();
+
+        ClassTwo classTwo = new ClassTwo();
+        classTwo.total_users();
+
+    }
+}
