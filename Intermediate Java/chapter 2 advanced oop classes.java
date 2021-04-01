@@ -75,3 +75,80 @@ public class Students {
 
 
 // Method overriding
+
+
+
+// the subclass overrides the super class
+
+class ParentClass{
+    public void display(){
+        System.out.println("I am the parent class");
+    }
+}
+class ChildParent extends ParentClass{
+        // No Methods
+}
+
+public class Students {
+
+    public static void main(String[] args){
+
+        ChildParent parentClass = new ChildParent();
+        parentClass.display();    // prints I am the parent class
+
+    }
+}
+
+
+
+
+// the subclass overrides the super class
+
+class ParentClass{
+    public void display(){
+        System.out.println("I am the parent class");
+    }
+}
+class ChildParent extends ParentClass{
+    public void display(){
+        System.out.println("Child  class");
+    }
+}
+
+public class Students {
+
+    public static void main(String[] args){
+
+        ChildParent parentClass = new ChildParent();
+        parentClass.display();                          // displays Child class and not parent class
+
+    }
+}
+
+
+// using override 
+// allows to to check for runtime errors instead of logical errors.
+// incase of mispelled methods or functions, the Overrride denotes them with an error
+
+class ParentClass{
+    public void display(){
+        System.out.println("I am the parent class");
+    }
+}
+class ChildParent extends ParentClass{
+    @Override
+    public void display(){
+        System.out.println("Child  class");
+    }
+}
+
+public class Students {
+
+    public static void main(String[] args){
+
+        ChildParent parentClass = new ChildParent();
+        parentClass.display();                          // displays Child class and not parent class
+
+    }
+}
+
