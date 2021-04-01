@@ -152,3 +152,62 @@ public class Students {
     }
 }
 
+
+
+//Super keyword to call 2 methods or functions of a class
+
+
+class ParentClass{
+    public void display(){
+        System.out.println("I am the parent class");
+    }
+}
+class ChildParent extends ParentClass{
+    public void display(){
+        super.display();
+        System.out.println("Child  class");
+    }
+}
+
+public class Students {
+
+    public static void main(String[] args){
+
+        ChildParent parentClass = new ChildParent();
+        parentClass.display();  // I am the parent class
+                                // I am the Child class
+
+    }
+}
+
+
+// varibale assignment with supper
+//Super keyword to call 2 methods or functions of a class
+
+
+class ParentClass{
+    int a;
+    public void display(){
+        System.out.println("I am the parent class");
+    }
+}
+class ChildParent extends ParentClass{
+    int a;
+    public void display(){
+        super.a = 20;  // assigns the 'a' in Parent class
+        super.display();
+        System.out.println("Child  class");
+    }
+}
+
+public class Students {
+
+    public static void main(String[] args){
+
+        ChildParent parentClass = new ChildParent();
+        parentClass.display();  // I am the parent class
+                                // I am the Child class
+
+    }
+}
+
