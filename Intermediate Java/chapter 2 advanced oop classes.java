@@ -36,3 +36,42 @@ public class Students {
     }
 }
     
+   
+
+// MULTI LEVEL INHERITANCE
+
+//sample created from the calculator
+class Calc{
+    public int add(int i, int j){
+        return i + j;
+    }
+}
+
+class AdvCalc extends Calc{
+    public int sub(int i,int j){
+        return i - j;
+    }
+}
+
+class VeryAdvancedCAl extends  AdvCalc{      // has sub and add .
+    public int mul(int i, int j){
+        return i * j;
+    }
+}
+
+
+public class Students {
+
+    public static void main(String[] args){
+
+
+        VeryAdvancedCAl veryAdvancedCAl = new VeryAdvancedCAl();
+        System.out.println(veryAdvancedCAl.sub(6,5));
+        System.out.println(veryAdvancedCAl.add(5,2));
+        System.out.println(veryAdvancedCAl.mul(5,2));
+
+    }
+}
+
+
+// Method overriding
