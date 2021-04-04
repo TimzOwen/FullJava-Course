@@ -211,3 +211,32 @@ public class Students {
     }
 }
 
+// Mathematical super example
+// Super keyword to call 2 methods or functions of a class
+
+class ParentClass {
+    int a, b;
+
+    public int calSum(int a, int b) {
+        return a + b;
+    }
+}
+
+class ChildParent extends ParentClass {
+    public int calSub(int a, int b) {
+        super.a = a;
+        super.b = b;
+        return a - b;
+    }
+}
+
+public class Students {
+
+    public static void main(String[] args) {
+
+        ChildParent parentClass = new ChildParent();
+        System.out.println(parentClass.calSub(5, 3));
+        System.out.println(parentClass.calSum(10, 20));
+
+    }
+}
