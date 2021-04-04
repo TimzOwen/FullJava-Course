@@ -240,3 +240,41 @@ public class Students {
 
     }
 }
+
+// RUNTIME & DYNAMIC METHOD DISPATCH
+// Super keyword to call 2 methods or functions of a class
+
+class A {
+    public void display() {
+        System.out.println("I am A");
+    }
+}
+
+class B extends A {
+    public void display() {
+        System.out.println("I am B");
+    }
+}
+
+class C extends A {
+    public void display() {
+        System.out.println("I am C");
+    }
+}
+
+public class Students {
+
+    public static void main(String[] args) {
+
+        // use class A but creates object B
+
+        A classA = new B();
+        classA.display(); // I am B
+
+        classA = new C();
+        classA.display(); // I am C
+                          // Dynamic dispath
+                          // chaning a method changes its calling
+
+    }
+}
