@@ -278,3 +278,54 @@ public class Students {
 
     }
 }
+
+// ENCAPSULATION
+
+// Encapsulation---> Binding data with methods
+// involves the use of getters and setters methods
+// Its variables are always private
+// the methods are always name according to its variables names in camel Case
+
+// --> Helps keep your values safe as you cannot modify them outside the class
+
+// --> can also be generated automatically with IDE using (generate getters and
+// setter from right clicking)
+// -> and going for option the selecting the variable names you want them to
+// generate the values
+
+class A {
+    private int myAge;
+    private String name;
+
+    // setters -->always void
+    public void setAge(int age) {
+        this.myAge = age;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // getters --> does not take in any arguement
+    public int getMyAge() {
+        return myAge;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+public class Students {
+
+    public static void main(String[] args) {
+
+        // Accessing the varibales
+        A a = new A();
+        a.setAge(5);
+        a.setName("Timz Owen");
+        System.out.println(a.getMyAge());
+        System.out.println(a.getName());
+
+    }
+}
