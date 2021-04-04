@@ -329,3 +329,33 @@ public class Students {
 
     }
 }
+
+
+
+// Wrapper classes and autoboxing 
+
+public class Main {
+    public static void main(String[] args) {
+
+        int a = 50; // primitive data types --->primitive variable assignment
+
+        Integer aa = 50;  // wrapper class
+                          // Reference variable
+                          // = new Integer(50)---> thou was rendered obsolete
+
+        Integer aaa = a;  // This boxing/ wrapping, parsing and int variable to wrapper class
+                          // = new Integer(a) -- Thou this became depreciated
+                            // Autoboxing
+
+        // Accessing variables
+
+        int b = aaa.intValue(); // thou no need to but for just understanding
+                                // Unboxing/ unwraping
+        System.out.println(b);
+
+        int bb = aaa; // directly accessing a variable
+                      // autoUnboxing
+        System.out.println(bb);
+
+    }
+}
