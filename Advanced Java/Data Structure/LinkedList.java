@@ -16,11 +16,11 @@ class SinglyLinkedList:
         #Create a new node  
         newNode = Node(data);  
           
-        #Checks if the list is empty  
-        if(self.head == None):  
-            #If list is empty, both head and tail will point to new node  
-            self.head = newNode;  
-            self.tail = newNode;  
+//         #Checks if the list is empty  
+//         if(self.head == None):  
+//             #If list is empty, both head and tail will point to new node  
+//             self.head = newNode;  
+//             self.tail = newNode;  
         else:  
             #newNode will be added after tail such that tail's next will point to newNode  
             self.tail.next = newNode;  
