@@ -51,3 +51,50 @@ from source code. With JVM java is independednt on machine's hardware
 ### Garbage Collection
 
 During this process, memory used by the object is automatically returned once all reference are gone.
+
+
+### Why is Java not 100% programming Languge?
+
+Because it supports primitive data type such as Long, byte......which are not objects
+
+### How Does java enable high perfomance 
+
+Uses Just in Time Compiler (JIT) to enable high perfomance. 
+
+JIT is used to conver instructions to bytecodes
+
+### What Gives java (WORA)?--> Write Once Run Anywhere
+
+The bytcodes: Java compiler converts java programs into a class file(Byte Code) which is the intermediate 
+
+Language between source code and byte code. This byte code is not platform specific making cross-platform.
+
+### Difference between == and .equal() methods.
+
+__.equal()__ is a method
+    
+    is a content comparison
+
+ __==__ is an operator.
+
+    is used for address comparison
+
+__Example:__
+
+    import java.util.Scanner;
+
+    public class CodeJava {
+        public static void main(String[] args){ 
+
+            String one = new String("Hello");
+            String one1 = new String("Hello");
+
+            System.out.println(one == one1);        //False
+            System.out.println(one.equals(one1));       // True
+
+        } 
+    }
+
+
+### What are OOPS Concept in Java?
+
