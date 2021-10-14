@@ -96,5 +96,7 @@ __Example:__
     }
 
 
-### What are OOPS Concept in Java?
+### What are OOP Concept in Java?
+
+OOP is the obstraction of objects in the realworld application. Objects are instnaces of classes
 
