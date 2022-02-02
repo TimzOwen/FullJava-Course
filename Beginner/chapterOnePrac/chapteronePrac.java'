@@ -1,0 +1,212 @@
+package com.codewithTimzOwen;
+
+import javax.swing.plaf.synth.SynthTabbedPaneUI;
+import java.awt.desktop.SystemEventListener;
+import java.text.NumberFormat;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        // you can call the functions here and practice .
+
+    }
+
+    // practice beginner quizzes.
+
+    public static String tenaryOperator2(){
+        int salary = 120_000;
+        return salary>=100_000 ? "First Class" : "Economy class";
+    }
+
+    public static String tenaryOperator(){
+        int salary = 10_000;
+        String classPlaced = salary>=100_000 ? "First class" : "Economy class";
+        return classPlaced;
+    }
+
+    public static boolean simplifyIfStatements(){
+        int income = 120_000;
+        boolean hasHighIncome;
+
+        if (income > 100_000)
+            hasHighIncome = true;
+        else
+            hasHighIncome = false;
+        return hasHighIncome;
+    }
+
+    public static boolean simplifyIf2(){
+        int salary = 10_000;
+        boolean hasHighIncome = false;
+        if (salary>=100_000)
+            hasHighIncome = true;
+        return  hasHighIncome;
+    }
+
+    public static boolean simplifyIf3(){
+        int salary = 150_000;
+        boolean hasHighIncome = salary >= 100_000;
+        return hasHighIncome;
+    }
+
+    public static void whileLoop(){
+        int i = 0;
+        while (i<5) {
+            System.out.println("Hello world " + i);
+            i++;
+        }
+    }
+
+    public static boolean whileloop2(){
+        int score = 3;
+        while (score< 5) {
+            System.out.println("Game is still on, score is: " + score);
+            score++;
+        }
+        return false;
+    }
+
+    public static boolean whileloop3(){
+        Scanner scanner = new Scanner(System.in);
+        String input  = "";
+        while (!input.equals("quit")){
+            System.out.println("Enter a number: ");
+            input = scanner.next().toLowerCase();
+            System.out.println(input);
+        }
+        return false;
+    }
+
+    public static boolean whileWithBreak(){
+        Scanner scanner = new Scanner(System.in);
+        String input = "";
+        while (!input.equals("quit")){
+            System.out.println("A number : ");
+            input = scanner.next().toLowerCase();
+            if (input.equals("quit"))
+                break;
+            System.out.println(input);
+        }
+        return true;
+    }
+
+    public static boolean whileWithContinue(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        String input = "";
+        while (!input.equals("quit")){
+            input = scanner.next().toLowerCase();
+            if (input.equals("pass")) {
+                System.out.println("Try again..");
+                continue;
+            }
+            if (input.equals("quit"))
+                break;
+            System.out.println(input);
+        }
+        return true;
+    }
+
+    public static void calculator(){
+        //Mortage calculator
+        final byte YEARS = 12;
+        final byte PERCENTAGE = 100;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Principal: ");
+        double principal = scanner.nextDouble();
+        System.out.print("Rate: ");
+        float rate = (scanner.nextFloat()) / PERCENTAGE;
+        System.out.print("years: ");
+        double years = (scanner.nextDouble()) / YEARS;
+
+        double interest = (principal * rate * years);
+        String intrests = NumberFormat.getCurrencyInstance().format(interest);
+        System.out.println(intrests);
+    }
+
+    public static void fizzBuzzGame(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Guess Number: ");
+        int guess = scanner.nextInt();
+        if ((guess%5==0) && (guess%3==0))
+            System.out.println("FIZZBUZZ");
+        else if (guess%5==0)
+            System.out.println("BUZZ");
+        else if (guess%3==0)
+            System.out.println("FIZZ");
+        else
+            System.out.println(guess);
+    }
+
+    public static void forLoop(){
+        // printing hello world 5 time
+        for (int i=0; i<5; i++)
+            System.out.println("Hello world " + i);
+    }
+
+    public static boolean loop2(){
+        for (int a = 10; a<=15; a++)
+            System.out.println("hello for loop");
+        return false;
+    }
+
+    public static void switchCase(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter score: ");
+        int score = scanner.nextInt();
+        switch (score){
+            case 10 -> System.out.println("scored 10");
+            case 20 -> System.out.println("scored 20");
+            case 30 -> System.out.println("Scored 30");
+            case 40 -> System.out.println("Scored 40");
+            default -> System.out.println("you scored above 40");
+        }
+
+    }
+
+    public static boolean switchRoles(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your number: ");
+        int rank = scanner.nextInt();
+        switch (rank){
+            case 1 -> System.out.println("you are the commander");
+            case 2 -> System.out.println("you are second in command");
+            case 3 -> System.out.println("you are 3 general");
+            default -> System.out.println("you have no rank");
+        }
+        return true;
+    }
+
+    public static String regexIncreamentNumber(){
+
+        Pattern digitPattern = Pattern.compile("(\\d)"); // EDIT: Increment each digit.
+
+        Matcher matcher = digitPattern.matcher("3");
+        StringBuilder result = new StringBuilder();
+        while (matcher.find())
+        {
+            matcher.appendReplacement(result, String.valueOf(Integer.parseInt(matcher.group(1)) + 1));
+        }
+        matcher.appendTail(result);
+        return result.toString();
+    }
+
+    public static boolean weatherCondition(){
+        int temp = 22;
+        if (temp > 30){
+            System.out.println("Hot day , waer light clothes");
+            System.out.println("Drink lot's of water");
+        }
+        else if (temp<30)
+            System.out.println("Cold outside, take a jacket");
+        else
+            System.out.println("stay indoors");
+        return false;
+    }
+
+}
