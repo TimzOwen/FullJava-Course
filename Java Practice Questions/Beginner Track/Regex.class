@@ -1,0 +1,10 @@
+public class Regex{
+    public static void main(String args[]){
+        // working with validation using Java Regex.
+        System.out.println("regex testing");
+
+        System.out.println("Hello Kenya");
+
+    }
+
+}
