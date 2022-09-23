@@ -8,16 +8,24 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Shape shape = new Shape();
-        shape.draw();
+     A parentClass = new A();
+     parentClass.classA();
 
-        Circle circle = new Circle();
-        draw()
-
-        Triangle triangle = new Triangle();
-        draw();
-
+     B childClass = new B();
+     childClass.classB();
 	
+    }
+}
+
+class A {
+    public void classA(){
+        System.out.println("this is parent class");
+    }
+}
+
+class B extends A {
+    public void classB(){
+        System.out.println("This is child class");
     }
 }
 
